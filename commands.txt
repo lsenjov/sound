@@ -1,0 +1,5 @@
+# Separate the tracks
+demucs ./Three\ Fingers.mp3 --mp3 --two-stems=drums  -nhtdemucs_ft
+
+# Make an mp4 with an image
+ffmpeg -loop 1 -i ./IMG_20230326_130419.jpg -i no_drums.mp3 -shortest -c:v libx264 -pix_fmt yuv420p -b:v 5M -preset slow video.mp4
